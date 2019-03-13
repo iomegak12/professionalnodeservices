@@ -20,7 +20,7 @@
     "@babel/cli": "*",
     "@babel/core": "*",
     "@babel/polyfill": "*",
-    "@babel/preset-env": "*",
+    "@babel/preset-env": "*"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
