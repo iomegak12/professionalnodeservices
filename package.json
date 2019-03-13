@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build-and-run": "babel-node index.js",
-    "debug": "babel-node debug index.js"
+    "debug": "babel-node debug index.js",
+    "start": "node publish",
+    "build": "npx babel src --out-dir publish"
   },
   "keywords": [
     "node",
@@ -15,9 +17,12 @@
   "author": "React Training Team",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0"
+    "@babel/cli": "*",
+    "@babel/core": "*",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/polyfill": "*",
+    "@babel/preset-env": "*",
+    "regenerator-runtime": "^0.13.1"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
