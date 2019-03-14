@@ -6,4 +6,4 @@ WORKDIR /app
 
 EXPOSE 9090
 
-ENTRYPOINT ["node ./publish/index.js"]
+CMD ["node ./publish/index.js"]
