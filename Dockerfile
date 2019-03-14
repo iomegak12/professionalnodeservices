@@ -1,11 +1,17 @@
 FROM mhart/alpine-node:latest
 
-COPY . /app
+COPY ./node_modules /app
+
+COPY ./publish /app
+
+COPY ./package.json /app
+
+copy ./README.md /app
+
+COPY ./web-content /app
 
 WORKDIR /app
 
-RUN npm install
-
 EXPOSE 9090
 
-ENTRYPOINT ["node_modules/.bin/babel-node", "index.js"]
+ENTRYPOINT ["npm start"]
